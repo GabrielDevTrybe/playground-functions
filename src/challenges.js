@@ -48,17 +48,25 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(14, 8))
 
 // Desafio 6
-function highestCount(...arrNumbers) {
-  // seu código aqui
+function highestCount(arrMaiorNum) {
+  //Primeiro encontrar o maior valor
+  let maiorIndice = arrMaiorNum[0];
+  for (let i = 0; i < arrMaiorNum.length; i++) {
+    if (arrMaiorNum[i] > maiorIndice) {
+      maiorIndice = arrMaiorNum[i]
+    }
+  }
+
+  //Depois comparar e ver quantas vezes esse valor se repete
   let count = 0;
-  for (let i = 0; i < arrNumbers.length; i++) {
-    if (arrNumbers[i] === Math.max(...arrNumbers)) {
+  for (let y = 0; y < arrMaiorNum.length; y++) {
+    if (maiorIndice === arrMaiorNum[y]) {
       count++
     }
   }
   return count
 }
-console.log(highestCount(4, 4, 3, 6, 7, 8, 8, 8))
+console.log(highestCount([4, 4, 3, 6, 7, 8, 8, 8]))
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
