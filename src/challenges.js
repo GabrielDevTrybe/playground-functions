@@ -3,9 +3,8 @@ function compareTrue(param1, param2) {
   // seu código aqui
   if (param1 === true && param2 === true) {
     return true;
-
   } else {
-    return false;
+    false;
   }
 }
 console.log(compareTrue(true, true))
@@ -105,12 +104,61 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 
 // Desafio 9
-function encode() {
+function encode(strEncode) {
   // seu código aqui
+  let stringSplit = strEncode.split('');
+  let emptySring = '';
+
+  for (let i of stringSplit) {
+    if (i === 'a') {
+      emptySring += '1'
+    } else if (i === 'e') {
+      emptySring += '2'
+    } else if (i === 'i') {
+      emptySring += '3'
+    } else if (i === 'o') {
+      emptySring += '4'
+    } else if (i === 'u') {
+      emptySring += '5'
+    } else {
+      emptySring += i
+    }
+  }
+
+  return emptySring;
+
 }
-function decode() {
+
+
+
+
+console.log(encode('hello'))
+
+
+function decode(strDecode) {
   // seu código aqui
+  let stringSplitDecode = strDecode.split('');
+  let stringVazia = '';
+
+  for (let i of stringSplitDecode) {
+    if (i === '1') {
+      stringVazia += 'a'
+    }else if (i === '2') {
+      stringVazia += 'e'
+    }else if (i === '3') {
+      stringVazia += 'i'
+    }else if (i === '4') {
+      stringVazia += 'o'
+    }else if (i === '5') {
+      stringVazia += 'u'
+    }else {
+      stringVazia += i
+    }
+
+  }
+  return stringVazia
 }
+console.log(decode('h2ll4'))
 
 // Desafio 10
 function techList() {
