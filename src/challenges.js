@@ -68,9 +68,19 @@ function highestCount(arrMaiorNum) {
 }
 console.log(highestCount([4, 4, 3, 6, 7, 8, 8, 8]))
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    return 'cat1'
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+    return 'cat2'
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }
 }
+console.log(catAndMouse(1, 6, 4));
+
 
 // Desafio 8
 function fizzBuzz(numbersFizzBuzz) {
