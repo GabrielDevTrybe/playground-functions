@@ -4,7 +4,7 @@ function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
   } else {
-    false;
+    return false;
   }
 }
 console.log(compareTrue(true, true))
@@ -161,9 +161,16 @@ function decode(strDecode) {
 console.log(decode('h2ll4'))
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
+  let objTechAndPersonNames = {
+    tech: tech,
+    name: name,
+  }
+  return objTechAndPersonNames
 }
+
+console.log(techList('Css', 'Gariel', 'js', 'Rodrigo'))
 
 module.exports = {
   calcArea,
